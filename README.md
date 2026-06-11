@@ -8,10 +8,10 @@
 
 #### `To create the container and run`
 ```
-docker run --name mysql
-    -e MYSQL_ROOT_PASSWORD=<your password> 
-    -e MYSQL_DATABASE=library_db 
-    -p 3306:3306 
+docker run --name mysql \
+    -e MYSQL_ROOT_PASSWORD=<your password>  \
+    -e MYSQL_DATABASE=library_db \
+    -p 3306:3306 \
     -d mysql:8
 ```
 #### `To run the container if it exist`
@@ -131,7 +131,8 @@ the fastapi server get them to his endpoints functions and do what needs to be d
 
 python -m venv .venv
 ./.venv/Scripts/activate
-
+```
+```
 # macOS/linux
 
 python3 -m venv .venv

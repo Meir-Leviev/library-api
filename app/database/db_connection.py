@@ -14,7 +14,7 @@ def create_tables():
     cursor = conn.cursor()
 
     books_sql = """
-    CREATE TABLE IF NOT EXIST books (
+    CREATE TABLE IF NOT EXISTS books (
         id INT PRIMARY KEY AUTO_INCREMENT,
         title VARCHAR(50) NOT NULL,
         author VARCHAR(50) NOT NULL,
@@ -24,7 +24,7 @@ def create_tables():
     )
 """
     members_sql = """
-    CREATE TABLE IF NOT EXIST members (
+    CREATE TABLE IF NOT EXISTS members (
         id INT PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(50) NOT NULL,
         email VARCHAR(255) UNIQUE NOT NULL,

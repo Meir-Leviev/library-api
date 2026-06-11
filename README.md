@@ -24,25 +24,21 @@ docker exec -it mysql mysql -u root -p
 ## Directory Structure
 ```
 library-api/
-│
 ├── app/
-│   └── main.py
-│
-├── database/
-│   ├── book_db.py
-│   ├── db_connection.py
-│   └── report_routes.py
-│
-├── routes/
-│   ├── book_routes.py
-│   ├── member_routes.py
-│   └── report_routes.py
-│
-├── logs/
-│   └── app.log
-│
-├── requirements.txt
-└── README.md
+│   ├── main.py
+│   │
+│   ├── database/
+│   │   ├── book_db.py
+│   │   ├── db_connection.py
+│   │   └── report_routes.py
+│   ├── logs/
+│   │   └── app.log
+│   └── routes/
+│       ├── book_routes.py
+│       ├── member_routes.py
+│       └── report_routes.py
+├── README.md
+└── requirements.txt
 ```
 - `app/` - where the web app is running 
 - `database/` - where all the data is stored

@@ -30,7 +30,7 @@ library-api/
 │   ├── database/
 │   │   ├── book_db.py
 │   │   ├── db_connection.py
-│   │   └── report_routes.py
+│   │   └── member_db.py
 │   ├── logs/
 │   │   └── app.log
 │   └── routes/
@@ -141,7 +141,7 @@ pip install -r requirements.txt
 ```
 - Run `python main.py`  to activate the server
 ```
-cd <where the project is>/library-api
+cd <where the project is>/library-api/app
 python main.py
 ```
 

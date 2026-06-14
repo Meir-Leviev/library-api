@@ -2,8 +2,6 @@ import app.database.db_connection as db_c
 
 
 class BookDB:
-    db_c.create_tables()
-
     def create_book(self, data: dict):
         values = (data.get("title"), data.get("author"), data.get("genre"))
 
@@ -101,11 +99,11 @@ class BookDB:
                 data = cursor.fetchone()
         return data["borrowed_books_count"]
 
-    def count_by_genre(self):
-        sql = "SELECT genre COUNT(*) AS count_genre FROM books GROUP BY genre"
+    def count_by_genre(self, genre) -> int:
+        sql = "SELECT genre COUNT(*) AS count_genre FROM books WHERE genre = %s"
         with db_c.get_connection() as conn:
             with conn.cursor(dictionary=True) as cursor:
-                cursor.execute(sql)
+                cursor.execute(sql, (genre,))
                 data = cursor.fetchone()
         return data["count_genre"]
 
